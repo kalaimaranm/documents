@@ -1,0 +1,16 @@
+                                                            Open-API
+                                                            
+            OAS(Open API Specification) - standard for Restful APIs 
+                                        - Allow to access the specification without  access to source code
+                                        - why? if you  have standardization like documentation user can build api with other language 
+                                        
+ How?
+       - There  are 2 main ways to create open api specification
+       ONE
+       1. use swagger editor to build JSON/Yaml file
+       2. use swagger code generator to create boiler plate code with your preffered language
+       
+       TWO
+       1. download open api library to java project and use swagger annotation in project and build api
+       
+                                                                                            

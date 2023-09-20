@@ -1,0 +1,51 @@
+
+
+
+
+addProduct()
+mokito error
+change all to yml including status
+
+
+
+
+
+
+Asset
+
+{
+
+  "assetName": "Laptop",
+
+  "assetDesc": "organisation competence development",
+
+  "price": "650000.00",
+
+  "serialNo": "PF33HQIH",
+
+  "ownership": "OwneD",
+
+  "tenantId": "123456",
+
+  "brandId": "069c76e7-cf80-421e-bafc-f66545133a5e-2",
+
+  "modelId": "7dbe2948-a968-4222-80fb-9bc04b3ff768-2",
+
+  "orderId": "7a52c904-ad3f-4e0b-9a29-29b75e0443c9-4",
+
+  "warranty": {
+
+    "startDate": "2023-09-19",
+
+  "endDate": "2023-09-30",
+
+  "status": "Active"
+
+  }
+
+}
+
+
+
+
+

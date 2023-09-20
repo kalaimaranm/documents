@@ -1,0 +1,64 @@
+                                                             Spring - MVC
+                                                             
+                                                             
+   why spring-mvc?                                                          
+               Spring Boot internally using Spring-MVC, So grasping mvc is so importants
+               
+               
+               
+   @Controller    - It is kind of servlet 
+                  - spring will automatically the class which annotated with @Controller and register in container
+                  - It is similar like @Component
+                  - Controller are also known as Handler
+                  - Method(@RequestMapping()) inside the controller are known as Handler methods.
+                  - Controller have all the mapping with it URL(Request) comming from clients.
+                  - we can create multiple mapping(Handler method) inside one controller
+                  - 
+   @RequestMapping - ask google matha       - classlevelmapping,methodlevelmapping - when you add @RequestMapping in above the method it then that method act as a service(HttpServletRequest request,Model model)     
+               
+   @ResponseBody  - It is used to print the response(HttpResponse) by returning the string in browser instead of using                   response.getWriter().print("") in servlet.                         
+               
+               
+                 
+               
+               
+               
+               standalone application - user manually create container object(ClassPathXmlApplicationContext,ApplicationContext)
+                                      - and close the container context.close()
+               
+               web application        - You don't need to create and destroy the container object(WebApplicationContext extends ApplicationContext) manully
+                                      - object will be created automatically during the server start up
+                                      - and destroy when server stop    
+                                      - DispatcherServlet will automatically create the object for webApplicationContext                  
+               
+               
+                                                            Flow of MVC
+                                                            
+                                  
+          HttpRequest(client) --> Frontcontroller(DispatcherServler(incoming or home page mapping)) 
+                              --> If first time the server is starup it create the object for controllers and register the mapping inside the controllers.
+                              --> ElSE request is not first request it map with the respective handler method with help of RequestMapping("")
+                              --> controller object have the all the mapping URL inside container
+                              --> If you use @ReponseBody the content you returning it directly print in browser
+                              --> ELSE you not used the @ResponseBody it search for the page with the name you returning in request mapping method automatically.                  
+                              
+                                                          ViewResolver(to achieve losely coupling)(path & extension)
+                                                          
+                                                       InternalResourceViewResolver
+                                                          1.implements ViewResolver
+                                                          2.extends UrlBasedViewResolver
+                                                          
+                                                          
+                                      - As I mentioned above for @ResposeBody is not used. We face error to gone through the error we using ViewResolver to view jsp,html,thymleaf,velocity,freemarker etc.... pages.
+                                      - InternalResourceViewResolver extends InternalBasedViewResolver                                                      
+                                                       
+               
+               walkthrough
+               
+                                                               MODEL
+                                                               
+                                        - It is used to store the data send it to view page from controller
+                                        - creating flexible view page with some data but same in design
+                                        - enter the input from tha user(client) and send request to server --> extract the data and --> insert into the model and send the page(JSP) --> print the data which is stored in the model object using EL.                        
+  why absolute ordering?
+   <absolute-ordering />                                                           

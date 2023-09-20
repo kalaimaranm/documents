@@ -1,0 +1,8 @@
+browser -> website -> inspect -> network -> doc -> Header -> General -> Remote Address
+
+DNS -> Domain Name System 
+    -> Which convert the website name to IP address
+How it's work 
+     OS       -> request to 1.1.1.1 do you know the IP address of amazon.com?
+     1.1.1.1  -> I don't know, But I the guy who know the guy. 
+        

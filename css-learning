@@ -1,0 +1,343 @@
+                                                                 CSS
+                                                                 
+Notes : 
+      use Tailwind for CSS. 
+      sudo class,
+      sudo element,
+      display property,
+      position,
+      border shadow
+      z-index
+      
+ back-up :
+ 
+    Margin allow - value
+    padding does not allow -value
+    always use padding instead of using width & height for more responsive****
+    line-height - paragraph
+    margin-left - spacing between the word using span
+    transform : translateX(10px); - moving button in x axis
+    transform : scale(1.1)  - increasing the size of the button(padding) without distrubing another button
+    div - it is drawing a box around the element
+    vertical-align: middle;
+    div - default have 100% width*** even if you make to inline-block
+    paragraph - default come with 16px margin **** but image doesn't
+ 
+ CSS - Specificity:
+  
+             selector priority
+                          1. class
+                          2. 
+         
+   use                                                                  
+     It tell browser to how to present the html content.
+     
+     what is SASS and LESS?
+  They are advanced CSS 
+  They extends CSS
+  It have some special functionality like loops, variables, if-condition.
+  
+  
+  There are three way for writing css
+  1. Inline - first preference.
+  2. Internal - second preference.
+  3. External - third preference - use this recommended one. 
+            
+            Because It load from top to bottom at final it with inline.
+            
+            
+ Selector :
+ 
+       used to select element
+       class - when a same design is applied for different (element) division use class.
+       id    - id are great when differentiating the element.     
+       *     - universal selector
+       h1{}
+       h1,p{}
+       descendent combinator - select inside the hirarchy    form div input{  }
+       attribute selector    - tag name[attributes.....],
+                                   name[type = "name"]{
+                                                          background-color : blue;   }
+
+               
+ Color : 
+     
+      RGB  -  Red Green Blue
+      
+      for color in css we can mention  by color name, hexa-decimal number, hsl 
+     2. Hexa-decimal -  #020082d7
+                       1. 02 - Red
+                       2. 00 - Green
+                       3. 82 - Blue
+                       4. d7 - opacity of color
+     3. HSL - Hue Saturation Lightness
+                                 1. Hue - color from top to bottom of the color wheel.
+                                 2. Saturation
+                                 3. light-ness
+     4. rgb(123,394,939)  -  red green blue
+     
+     5. rgba(123,138,343,834)  -  red green blue alpha
+     
+                                                                    
+                                 
+       properties : 
+                color - is used to add color to the text.
+                background-color -  is sed to add color to background
+                width  -  x axis  - px
+                height -  y axis  - px
+                font-size - px
+                
+                       
+ Units :
+   
+          pixel (px)  -  take the constant(absolute value) size from the parent  - not responsive
+          %           -  take the size from the parent           - responsive
+          em          -  take the parent pixel 
+          rem         -  take the default font size of html by default 16 pixel(route elemet)
+          
+              eg: 
+                  parent font-size 25px
+                  child  font-size 1.5em    =  50px
+                  
+ Fonts :
+ 
+                             styling text - properties
+                
+                font-family         : 'poppins',arial   -  poppins is first preference if not able to load it take arial
+                font-weigth         : 100-900           - thickness of the fornt
+                font-size           : rem,em,px,%       - size of the font                   (Veticle)
+                line-height          : 1.50(1.50*font-size)
+                color               : 
+                font                : 18px/1.50 font-family (3 in 1)
+                text-transform      :     lowercase - all letter lowercase,
+                                          uppercase - all letter upppercase,
+                                          capitalize- starting letter only in uppercase 
+                letter-spacing      : 1px                                                    (Horizontal)
+                text-align          : start(left), end(right), center
+                text-decoration     :  underline,none - is used with anchore link.
+                
+                
+                                Hover &  Active
+                          use with a anchor tag and links
+                                
+         when mouse pointer is on the element        -   Hover   - .class a:hover {   changes....}
+         while mouse is click action on the element   -   Active - .class a:active{   changes....}
+         
+         
+ Dimensions :
+           
+              height & width won't work in inline only in block inline-block
+              
+                              Display
+                              
+                  display - block
+                  display - inline-block
+                  min-width - how short
+                  max-width - how long
+                  
+ Box Model :
+ 
+              margin - allow negative values
+              border
+              padding - don't allow negative values
+              
+              10px,20px,10px,20px   -  top,right,bottom,left
+              10,20                 - top+bottom,left+rigth
+              10,20,10              - top,left+right,bottom
+              
+                     margin-collapse
+                    
+                  <h1 id = "one">content-one</h1>
+                  <h1 id = "two">content-two</h1>        
+                 
+                  <style>
+                  #one {
+                       margin-bottom : 20px
+                  }
+                  #two {
+                       margin-top : 40px
+                  }
+                  <style>
+          *  In above style you think total distance margin between two content is 20+40 = 60px   that's absolutely wrong
+          *  Here it take the greater px which is two 40px
+ Box sizing :
+     
+              box-sizing: context-box;    -   loss of space   -  going(shring) outer   width,heigth  +
+              box-sizing: border-box;     -   loss of context -  going(shring) inside  width,heigth  -
+                                                                   
+                             
+ Border :
+  
+          To hight light the content
+          
+          border       : 1px solid black;
+          border-width : 5px (size)
+          border-style : solid,dotted
+          border-color : black, red...
+                                                
+ Display property : 
+                             
+                         inline       - Advantage : only occupy the required            Disadvantage: can't resize the width and heigth
+                         block        - Advantage : occpy the whole space,resizeable    Disadvantage: occupy all size
+                         inline-block - if you want to inline function + block resizable then go with this.              
+                         
+ Flex Box :  for parent
+        
+        Box {
+        item-1
+        item-2
+        item-3
+        }
+                   One Dimension
+                   Cross axis  - y-axis
+                   Main axis   - x axis
+                   
+                   
+                   
+                   
+ properties :      display : flex  (mode on)   for container
+                   
+                         1) flex-direction:row            1 2 3 4  -  default display : flex;
+                         2) flex-direction:row-reverse    4 3 2 1 
+                        
+                         3) flex-direction:column         1
+                                                          2
+                                                          3
+                                                          4
+                                                          
+                         4) flex-direction:column-reverse 4
+                                                          3
+                                                          2
+                                                          1
+                                                          
+ Flex Wrap :
+ 
+                     display : flex   (mode on)
+                     
+                   1) flex-wrap : nowrap          - overflow
+                   2) flex-wrap : wrap            - all div inside the div 
+                   3) flex-wrap : wrap-reverse    - all div inside the div but in reverse
+  
+ Justify-content :  Main-axis alignment   x-axis
+ 
+    flex-start,flex-end,flex-center,space-around,space-between
+ 
+                 justify-content: flext-start
+                 justify-content: flex-end
+                 justify-content: center
+                 justify-content: space-around
+                 justify-content: space-between
+                 
+ flex-grow :    increase size of the each division 
+   
+                flex-grow:1;
+                                
+ flex-basis :   to customise the specific box width                
+ align-content :  Cross-axis alignment    y-axis , vertical alignment
+ 
+                 
+               align-content: flex-start
+               align-content: flex-end
+               align-content: center
+               align-content: basel
+ine
+               align-content: stretch  (height increasing)
+               align-content: space-around
+               align-conten: space-between
+ align-items :  y- axis
+ 
+             align-items: flex-start
+             align-items: flex-end;
+             align-items: space-around
+             align-items: space-between;
+             
+              
+  item -order : 0 1 2 3 -> align you'r content with respect to this order         
+                
+                display: flex
+                .class1{
+                order:3}
+                .class2{
+                order:1}
+ 
+ list-style-type :   list-style: circle inside url('')
+   
+            list-style-type : decimal
+            list-style-type : circle
+            list-style-type : decimal-leading-zero
+            
+            for button
+            list-style-image : url('')
+            
+            for align left side 
+            list-style : inside/outside
+
+ 
+ positioning :  Each box(child)
+ 
+ 
+            1. static - default
+            2. relative - where ever we can move (T,R,B,L)
+            3. absolute - It's not in the document come out from the document(3D) , It not belongs to any parent, It parent is Body
+            4. 
+                      
+         CASE 1:{   changing absolute to relative with absolute behaviour
+         
+         making parent position:relative;
+                child position: absolute;
+                absolute child will move with respective to the parent
+                
+         }   	               
+                top:0
+                rigth:0
+                used to move the left rigth top bottom
+                
+                 
+ 
+   ?????
+      fixed vs absolute
+                     
+                                        Image
+                                       
+      1. object-fit : cover; - which cover(take) the images with the respective to the width and height (content may lose if image not not match to width and height)
+      1.2 object-fit : contain; - which cover the without losing the image content.
+      
+      2. object-position: right|left|top|bottom;  - left side of the image cover the width and height
+                                                  - right side of the image cover the width and height                             
+                    
+                    
+                    
+                                      Layout
+                                      
+                                             
+                    
+                    
+                    
+                                           Transition
+                                           
+           -To achiev smooth hover
+           -Always use Transition inside the class not in hover****
+           
+           transition
+           transition-property
+           transition-duration
+           transition-delay
+           transition-timing-funtion
+            
+                                transition + hover
+                                
+                transition-property: heigth, width, background; / all - applied for all  / transition : heigth, width, background 1s, 2s, 1s;
+                transition-duration: 1s, 2s, 1s;               / 1s   - applied for all  / 
+                     
+               transition-property + transition-duration + transition-delay + transition-timing-function = transition: all 1s;
+                 	                                               
+               transition-timing-function:
+               
+               
+                                       Box-shadow
+                                       
+                                 box-shadow: 0px, 0px, 0px, 0px, black;
+                                            hori, down, blur, spread, color;
+                                            		      
+                                  	                                                             
+                                                                                                                                                                                                                              

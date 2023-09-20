@@ -1,0 +1,217 @@
+                                                                 JDBC-Template
+                                                                 
+                                                                 
+            JdbcTemplate is provided by Spring
+            
+            
+            JdbcTemplate   =  connection(DataSource) + statement;
+            
+            DriverManagerDataSource(c) implements DataSource(I)                                                     \
+            
+            
+            
+            
+            can I use DriverManagerDataSource?
+            
+            
+            first off all we want to make a connection between the DB -  here DataSource(I) using the class BasicDataSource/DriverManagerDataSource  implements 
+            second we have to create statement                        - Here automatically the JdbcTemplate take care
+            
+            third we have to create object for JdbcTemplate           - Which need connection (DataSource)
+            
+            fourth using this JdbcTemplate                            - we can execute the query
+            
+            
+           METHODS:
+            
+            update("Query",{var-args}) - DML update,delete,insert
+            batch("Query", list<Object[]>)     - List of student (insertion)
+            batchUpdate("QUERY",list<Object[]>)- List of student (batch update)
+            query("Query", new studentMapper()) - select * from tableName
+            queryForObject("QUERY",new RowMapper(), setting values for query(?))
+            execute("QUERY") - especially for DDL - alter, create, trancate, drop *****
+            
+            RowMapper is an Interface
+            
+                mapRow() is a callback function;
+                
+                
+           BeanPropertyRowMapper - column name and field name should be same
+           
+                                 - this is to avoid the customer RowMapper
+                                 - auto RowMapper
+                                 - use alias in query
+                      eg: 
+                      query("QUERY",new BeanPropertyRowMapper<MapperClass>(MapperClass.class));       
+                      
+                      
+  ResultSetExtractor - it is also kind of RowMapper
+                                                                 |
+                   RowMapper                                     |                  ResultSetExtractor
+                                                                 |
+                                                                 |
+    1. can be fetch sigle data at a time which return single     |       only one time calling the method it is like normal JDBC for loop Iteration
+        Object                                                   |       which return the List<Student>
+                                                                 |
+    2. method calling increase                                   |       only one time method calling
+                                                                 |
+    3. one by one execution                                      |      
+                                                                 |
+    4. return type single object                                 |      return List<Student> 
+                                                                 |      
+                                                                 |
+                                                                 |
+                                                                 |
+                                                                 |
+                                                                 |
+                                                                 
+  BatchPreparedStatementSetter  -  query == batchUpdate("", BatchPreparedStatementSetter);
+  
+  
+             getBatchSize  - In this method we have to specify how many times our set Values method is going to execute, or how many times our Query will execute
+             setValues     - This method have two args 
+                            (PreparedStatement ps, int index)
+                            
+                           - This method run each and every time until the size of the getBatchSize == index
+                           
+                           
+                           
+                                                  Transaction
+                                                  
+ IMPORTANT : ****************
+           - If you use try catch inside the Transaction method then transaction will not be rollback()  
+           - So use try catch outside the method
+           - User have to roll back in catch{  }
+           
+           checkedException(Exception) && unCheckedException(RuntimeException)
+           
+                 checkedException - are (outside the program) FileNotFoundException, InputMismatchException, IOException, SQLException and ParseException.           
+           uncheckedException     - are (inside the program) 
+                                                          
+                                                  
+                    - Use Transaction for place order;
+  @Transactional  
+   
+                 - It can be used in method()
+                 - When we mark a method with @Transactional if you invoke that method 
+                 eg:   
+                  
+                     @Transactional
+                    public void placeOrder(){
+                     
+                     
+                     orderEntry() && payment()  && lineItemEntry()
+                     
+                     }                                              
+                        
+                        
+                        
+                                                        TransactionManager
+                                                        
+                                                        @EnableTransactionManager + new DataSourceTransactionManager(DataSource) - inside configuration
+                                                        
+                    - In spring-Boot transaction is maintained automatically 
+                    - 
+                     
+                     PlatformTransactionManager
+                              - getTransaction()
+                              - commit()
+                              - rollBack()
+                              - close() is inside the Connection
+                    DataSourceTransactionManager
+                    
+                        - It is class which extends TransactionManager
+                        
+                        
+                        
+                                                   TransactionManager(I)
+                                                   
+                                                         |
+                                                         |
+                                                         v
+                                                   PlatformTransactionManager(I)
+                                                         |
+                                                         |
+                                                         v
+                                                   AbstractTransactionManager(C)
+                                                         |
+                                                         |
+                                                         v
+                                                   DataSourceTranactionManager(C)
+                                                               
+                             
+                             
+                             default roll back  - uncheckedException - with in the program
+                               no    roll back  - checkedException   - outside the program throws()
+                               
+    @Transactional(rollBackFor = Exception.class)           - opposite
+    @Transactional(noRollBackFor = RuntimeException.class)  - opposite                              
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+                                                                  Propagation(Transaction reusablility)
+                                                                  
+                                                                  
+     ********Transaction successfull when the whole process is success else roll back all eg: paytm debit and credit to friend***********
+        
+        
+        
+                                 
+        @Transactional(propagation = Propagation.REQUIRED) -  REQUIRED always need a new trasaction
+                                                              If the Transaction is already Exsit it use that transaction
+                                                              If not It create new Transaction
+                                                              
+                                                              
+                                                              
+             eg:
+             
+              @Transactional(propagation = Propagation.REQUIRED)   // START  - (1)
+    public void insertProduct() throws Exception gi{
+
+//        ProductDAO productDAO = new ProductDAOImpl();
+        for (int i = 1; i < 10; i++) {
+            Product product = new Product(i, "product " + i, LocalDate.now());
+            productDAO.saveProduct(product);    // TRANSACTION SHARED TO saveProduct() method   - (2)
+            if (i == 5) {
+                throw new Exception("user defined run time exception occured ");
+            }
+        }
+        
+//         COMMIT     -   (4)
+
+    }
+    
+    
+    @Transactional(propagation = Propagation.REQUIED) // NO TRANSACTION CREATED USE THE OLD TRANSACTION WHERE IT IS CALLED  -  (3)
+    saveProduct()
+    
+    
+                                            ASPECT 
+                                            
+                   All the non-functional code should be in Aspect class
+                                 eg: Logging
+                                     Tracing
+                                     
+   @Aspect
+                             - use in above the class which is going to act as a aspect class
+                        
+   @EnableAspectJAutoProxy   - This help to create proxy for class                          
+                                                               
+                                                                                                                              
+   @PointCut("com..service.*")   
+                          - If my package name is com.bassure.project.service
+                          - * denoting all the class,method inside the package 
+                          - This pointCut tell the which class is should I track
+                          
+                          
+  @Before 
+                         - Before the method call 
+                         
+                         
+                         
+                         
+                   webflux - functional and reactive programming  
+                                         
+                          
+                                                                                       

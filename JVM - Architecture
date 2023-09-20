@@ -1,0 +1,15 @@
+one physical Machine running multiple Logical Machine is Hardware based Virtual Machine
+
+Advantage:
+   1.Hardware Resources sharing 
+   
+   
+   
+These Virtual Machines access to run a particular programming languages applications
+     1.JVM-Java Virtual Machine (Access Run Time Engine to run Java based Application)
+     2.PVM-Paret Virtual Machine (Access Run Time Engine to run Perl based Application)
+     3.CLR-Common Language Runtime (Access Run Time Engine to run Dot Net based Application)
+     
+     
+JVM -  is part of JRE
+    2. to load and run the .class file     

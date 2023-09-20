@@ -1,0 +1,11 @@
+                                                                Type-script
+                                                                
+   excestion - .ts
+       To achieve OOPS in javascript
+       TS -> compiler -> js
+       
+      - Easy to debugging
+      - Show error in compiler time (while writing)
+      - easy to write enum in ts
+      - strict JS
+      - structured                                                             

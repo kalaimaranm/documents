@@ -1,0 +1,64 @@
+
+
+
+
+
+incognito - will take the cookies from browser which is already stored 
+
+
+
+
+
+
+
+
+import java.util.*;
+class BirdWatcher {
+    private final int[] birdsPerDay;
+
+    public BirdWatcher(int[] birdsPerDay) {
+        this.birdsPerDay = birdsPerDay.clone();
+    }
+     
+    public int[] getLastWeek() {
+        return this.birdsPerDay;
+    }
+
+    public int getToday() {
+       return birdsPerDay[birdsPerDay.length-1];
+    }
+
+    public void incrementTodaysCount() {
+        birdsPerDay[birdsPerDay.length-1]++;
+    }
+
+    public boolean hasDayWithoutBirds() {
+        int[] birdClone = birdsPerDay.clone();
+        Arrays.sort(birdClone);
+        if (birdClone[0]==0){
+            return true;
+        }
+        return false;
+    }
+
+    public int getCountForFirstDays(int numberOfDays) {
+        int temp=0;
+     for (int i=0;i<numberOfDays;i++){
+         temp+= birdsPerDay[i];
+     }
+       return temp;
+    }
+
+    public int getBusyDays() {
+        int[] arClone = birdsPerDay.clone();
+        Arrays.sort(arClone);
+        int i=0;
+        for(int temp: arClone){
+            if (temp>=5){
+                i++;
+            }
+        }
+        return i;
+    }
+}
+

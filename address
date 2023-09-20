@@ -1,0 +1,43 @@
+                                                                  Address Service
+                                                                  
+  Address belongs to individual
+  Address belongs for a company
+  Individual may have more than one Address
+  Flexible and scalable - column may increase dynamic
+  Each of the address can be named by individual
+  Standard Attributes
+  country
+  state
+  city
+  Adderss Line1
+  Address Line2
+  Zipcodes with different countries
+  
+  
+  
+  Different Tenant should open to add the additional attribute
+  No address can be deleted
+  A Tenant can set once the address is added for any one settings like can or cannot be modified after a time (ask before submit the address)
+  List of Active address can be listed(A/NA)
+  Entire history of address to be there(last update)
+  Entity can be anything
+  
+  
+  list out the required end point.
+  
+  sonar
+  elk for logs 
+  bounded context - microservices
+  what are the products? where are they? How many are they?
+  moving and non-moving electronics and non-electronics
+  what is product engineerig?
+  
+  
+   
+  
+  
+                                                                
+                                                                  
+                                                                  
+                                                                  
+                                                                  

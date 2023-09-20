@@ -1,0 +1,35 @@
+can be work with document(JSON,XML)
+Netflix, Hotstar use cloud database
+PostgreSql - open source, ORDBMS, No hidden charge
+
+
+Download - 
+     1. sudo apt install postgresql
+     2. sudo systemctl status postgresql - check if installed
+Go inside postgresql -  sudo -i -u postgres
+                     - \psql
+                     - \l list all the databases (show databases;)
+                     - create database customer (To create database)
+                     - \c customer (To use Database)(connect to database)
+                     - \dt (To list the tables inside the selected database) (show tables)
+                     -// \d tablename (To describe the table)
+                     - create table table name();  (same)
+                     - 
+                     - \q exit
+                     - 
+                     
+                     
+Data Manipulate Language:
+            insert,update,delete
+Data Definition Language:
+            create,alter,drop,truncate,rename
+                                 
+                     
+
+
+
+
+
+
+Note:
+   1. column name in table is known as metadata

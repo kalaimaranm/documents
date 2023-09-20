@@ -1,0 +1,149 @@
+                                                                   Java Script
+                                                                   
+                                                                   
+        Netscape -  is developed javascript
+        
+        ECMA script is standard javascript
+        
+        bable  -  It help the react to support the egma script(which is diprecated) embed the old 
+        
+         Java script is a single threated    
+         
+         
+         
+         blocking non-blocking synchronous as synchronous    
+         
+         
+         non-blocking vs as synchronous    - difference
+         
+         concurrency -  1. multiprocess  with 1.  synchronous    - step by step (late)  - blocking the code below that code
+                                              2.  as synchronous - multi processing     - does n't block the code keep going
+                                              
+                                              
+                                              
+                                              
+                                              
+                                                                  Event looping
+                                                                                                 
+                                                                                                 
+                                                                                                 
+                                                                                                 
+                                                                                                 
+                                                                                                 
+                                                                                                 
+                                                                arrow function
+                                                                
+                                                                1.no function key word                                 
+                                                                 2. no return key word
+                                                                 3.                                 
+                                                                
+                                                                
+                                                                
+  NOTE:
+          ()     -  this is needed when no parameter
+          number - () no needed when you have single parameter
+          {}     - needed for more than one statement
+          {}     - no needed for single statement
+          return - need for more than one line or more than one statemet
+          return - no need for single line statemet                                
+          
+          
+          
+                                                                 array function
+                                                                 
+                                                                 
+                                                              1. map - interact with each data 
+                                                              2. filter - specific condition
+                                                              3. reduce - return single output
+                                                                                                                       
+                                                                                                                                                        
+                                                                callback function
+                                                   
+                                                   The function will invoked after certain millisecond given             
+                                                   Call back- hell  looks like christmas tree
+                                                   
+                                                   setTimeOut - is provided by the webAPI browser
+                                                   
+                                                   
+                                                   
+                                                   structure:
+                                                   parent(
+                                                   grandparent(
+                                                   grandgrandparent(
+                                                   grandgrandgrandparent(
+                                                   .
+                                                   .
+                                                   .
+                                                   .))
+                                                   )
+                                                   )                
+                                                                
+                                                                
+                                                            
+                                                            
+                                                               promise (like stream)
+                                                               
+                                                                  
+                                                                  
+                                                 keyword:
+                                                        maker - which return promise object
+                                                        receiver - which call the promise function
+                                                        
+                                                     1. resolve
+                                                     2. reject
+                                                           .then((result)=>{console.log(`successfull`)}, (error)=>{console.log(`rejected....`)}) 
+                                                     3. result
+                                                     4. error
+                                                     
+                                                                      
+                                                 To overcome call-back-hell
+                                                 promises cycle:
+                                                 
+                                                 
+                                                                    A promise is made
+                                                                          |
+                                                                          |
+                                                                          V
+                                                                        Pending
+                                                                         /  \
+                                                                        /    \
+                                                                       /      \
+                                                                      /        \
+                                                                      V         V 
+                                                                    Resolve     Reject
+                                                                      |           |   
+                                                                      |           |
+                                                                      V           |
+                                                                   .then          catch
+                                                                      |           |
+                                                                      |           |
+                                                                      |           |
+                                                                      V           |
+                                                                    .then         |
+                                                                      |           |
+                                                                      |
+                                                                      |
+                                                                      V
+                                                                    .then
+                                                                    .            
+                                                                    .
+                                                                    .
+                                                                    .        
+                                                                       \         /
+                                                                        \       /
+                                                                         \     /                                                              
+                                                                          finally                 
+                                                              To overcome callback hell
+                                                              
+                                                              
+                                         Types :
+                                           1. Resolve
+                                           2. Reject
+                                           3. Pending
+                                           4. Fullfill
+                                           
+                                                                       
+                                                                         
+                                                              
+                                                             Async/await
+                                                                                                                                                                 

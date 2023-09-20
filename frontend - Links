@@ -1,0 +1,106 @@
+https://www.quackit.com/html/html_table_generator.cfm    -   table generator
+
+https://www.jotform.com/css-form-generator/              -    form generator
+
+
+https://beautifytools.com/html-form-builder.php          -    form generator
+
+
+https://www.zoho.com/forms/html-form-builder.html        -   form generator
+
+
+
+https://www.123formbuilder.com/full-css-form-customization.html  - from generator
+
+
+
+
+
+
+<div class="viewcustomer">
+    <div class="">
+        <h1 access="false" id="control-7823122">View Customer</h1></div>
+    <div class="formbuilder-text form-group field-phone">
+        <label for="phone" class="formbuilder-text-label">phone no<span class="formbuilder-required">*</span></label>
+        <input type="text" placeholder="Enter Your Registered phone no" class="form-control" name="phone" access="false" id="phone" required="required" aria-required="true">
+    </div>
+    <div class="formbuilder-button form-group field-submit">
+        <button type="submit" class="btn-success btn" name="submit" access="false" style="success" id="submit">submit</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <title>view customer</title>\n");
+      out.write("    <head>\n");
+      out.write("        <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->\n");
+      out.write("        <style>\n");
+      out.write("            table.GeneratedTable {\n");
+      out.write("                width: 80em;\n");
+      out.write("                background-color: #f7f7f7;\n");
+      out.write("                border-collapse: separate;\n");
+      out.write("                border-width: 2px;\n");
+      out.write("                border-color: #121211;\n");
+      out.write("                border-style: double;\n");
+      out.write("                color: #000000;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            table.GeneratedTable td, table.GeneratedTable th {\n");
+      out.write("                border-width: 2px;\n");
+      out.write("                border-color: #121211;\n");
+      out.write("                border-style: double;\n");
+      out.write("                padding: 3px;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            table.GeneratedTable thead {\n");
+      out.write("                background-color: #04beec;\n");
+      out.write("            }\n");
+      out.write("        </style>\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("        <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->\n");
+      out.write("        <table class=\"GeneratedTable\">\n");
+      out.write("            <thead>\n");
+      out.write("                <tr>\n");
+      out.write("                    <th>Header</th>\n");
+      out.write("                    <th>Header</th>\n");
+      out.write("                    <th>Header</th>\n");
+      out.write("                    <th>Header</th>\n");
+      out.write("                    <th>Header</th>\n");
+      out.write("                    <th>Header</th>\n");
+      out.write("                </tr>\n");
+      out.write("            </thead>\n");
+      out.write("            <tbody>\n");
+      out.write("                <tr>\n");
+      out.write("                    <td>Cell</td>\n");
+      out.write("                    <td>Cell</td>\n");
+      out.write("                    <td>Cell</td>\n");
+      out.write("                    <td>Cell</td>\n");
+      out.write("                    <td>Cell</td>\n");
+      out.write("                    <td>Cell</td>\n");
+      out.write("                </tr>\n");
+      out.write("            </tbody>\n");
+      out.write("        </table>\n");
+      out.write("    </body>\n");
+      out.write("    <!-- Codes by Quackit.com -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("</html>\n");

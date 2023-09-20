@@ -1,0 +1,32 @@
+after place an one order put tempLine.length()=0;
+
+
+
+
+
+
+Exception
+ 1.add product name-  own exception and method - pending
+ Colour - product added successfully & Customer added & placed order & quantity updated & debt amount paid successfully & customer updates
+2.payment exception(order & debt) - pending - productId
+
+
+
+phoneno - check length - >0 check - 
+
+
+
+
+
+
+
+
+
+
+
+Bugs
+
+1. user can place a order without items
+2. update menu wrong loop rotation.
+3. Product not found menu and error message conflicts.
+4. order should be placed after the payment.

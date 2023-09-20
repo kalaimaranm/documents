@@ -1,0 +1,121 @@
+/*class Customer {
+    static int i;
+    Scanner scan = new Scanner(System.in);
+    short custId;// = 2134;
+    String name;
+    String address;
+    String phoneNo;       // change this to long by adding l with last (String - and add 'l' convert into long)
+    String aadharNo;
+
+    Customer(short custId, String name, String address, String phoneNo, String aadharNo) {
+        this.custId = custId;
+        this.name = name;
+        this.address = address;
+        this.phoneNo = phoneNo;
+        this.aadharNo = aadharNo;
+    }
+    Customer(){
+        
+    }
+
+    void add() {
+
+    }
+
+    boolean view(String phoneNo2) {
+        for (i = 0; i < cusArr.length; i++) {
+            if (cusArr[i].phoneNo.equals(phoneNo2)) {
+                //System.err.println("    *************Customer Detail************   ");
+                //System.out.println(cusArr[i]);
+                // check = 100;
+                // break;
+                return true;
+            }
+            return false;
+        }
+
+        void update
+        
+        
+            () {
+        boolean flag = true;
+            while (flag) {
+                System.out.println("Enter the Customer PhoneNo ");
+                String phoneNo = scan.next();
+                if (view(phoneNo)) {
+                    System.out.println(" _________________________________");
+                    System.out.println("| Press 1 : Update PhoneNo");
+                    System.out.println("| Press 2 : Update Name");
+                    System.out.println("| Press 3 : Update AadharNo");
+                    System.out.println("| Press 4 : Exit");
+                    System.out.println(" __________________________________");
+                    System.out.println("Enter the Option From Above Menu");
+                    int options = scan.nextInt();
+                    switch (options) {
+                        case 1: { // phoneNo
+                            System.out.println("Enter PhoneNo You would like to change ");
+                            String phoneNoChange = scan.next();
+                            cusArr[i].phoneNo = phoneNoChange;
+                            System.out.println("Your PhoneNo successfully changed ");
+                            break;
+                        }
+                        case 2: { // name
+                            System.out.println("Enter Name You would like to change ");
+                            String nameChange = scan.next();
+                            cusArr[i].name = nameChange;
+                            System.out.println("Your Name successfully changed ");
+                            break;
+                        }
+
+                        case 3: {   // aadhar
+                            System.out.println("Enter Name You would like to change ");
+                            String aadharChange = scan.next();
+                            cusArr[i].name = aadharChange;
+                            System.out.println("Your Aadhar Number successfully changed ");
+                            break;
+                        }
+                        case 4: { // break
+                            flag = false;
+                            break;
+                        }
+                        default: {
+                            System.out.println("Please Select a valid Option");
+                            break;
+                        }
+                    }
+
+                } else {
+                    System.err.println("Customer Detail Not Found");
+                }
+            }
+
+        }
+
+        void softDelete
+        
+        
+        () {
+
+    }
+
+    void placeOrder
+        
+        
+        () {
+
+    }
+
+    void acceptPayment
+        
+        () {
+
+    }
+
+    
+
+    public String toString() {
+        return "Customer ID : " + this.custId + "\n" + "Customer Name : " + this.name + "\n" + "Customer PhoneNo : " + this.phoneNo + "\n" + "Customer AadharNo : " + this.aadharNo;
+    }
+
+}*/
+

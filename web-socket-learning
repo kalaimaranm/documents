@@ -1,0 +1,45 @@
+                                                                     WEB-SOCKET
+              
+              
+   HTTP(1.0) - 1995    
+   
+   
+             For Each HttpRequest it create connection and send a response -> <- and close
+             We cannot do web-socket on HTTP(1.0)
+             
+  HTTP(1.1)  - Super-Hero
+         
+               Only one HttpRequest it created connection and multiple-request send a multiple-response and finally close
+               With the help of HTTP(1.1) Websocket is working
+                      
+                                                                            
+                       
+   HTTP    - Request, Response
+            It is protocol 
+            Build with TCP Protocol
+            
+                                                              web-socket
+   Web-Socket - Binary Protocol
+   
+             It is used to get response without request from the client - whatsapp, user is typingg.....
+             
+   
+  protocol ws://    
+  
+  web-socket user-cases:
+               1. Chatting - It is used to get response without request from the client - whatsapp, user is typingg.....
+               2. Live Feeding
+               3.Multiplayer gaming
+               4.Showing client progress/logging
+                     
+            Polling - create lot of new Http-request connection
+                    - send lot of empty response
+            
+            Long-Polling - only one Http request connection for perticular time-period
+                         - After the Time-out client have to create new request connection
+            
+            Web-socket   - Client create Web-socket connection with the help of web-socket hand-shake
+                         - step 1: Client send a request for web-socket connection 
+                         - step 2: Servet send a reponse in header for web-socket connection
+                         - step 3:          
+                                                                              

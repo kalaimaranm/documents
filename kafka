@@ -1,0 +1,35 @@
+kafka - message distributing system
+      - It is like a file system but it not a file system
+      - It is used to store data and read data
+      
+Producer - Who pusing data into the kafka 
+
+Consumer - who read the data from the kafka
+
+Topic - data are store in Topic inside kafka
+
+Partition - It happen inside the topic, It seperate(Distribute) the data and store it in partition(round robin type) because of this 
+RoundRobin - let consider producer producing 1million data. you have 4 partition. Data is store in first 2.5Lakhs data in first partition 
+                                                                                                  second 2.5Lakhs data in second partition
+                                                                                                  third  2.5Lakhs data in third partition
+                                                                                                  fourth 2.5Lakhs data in fourth partition 
+Advantage of Partition:
+                      - as a consumer reading the data from the topic fastly
+                      - we can read the data parallelism(parallel) 
+Broker - It just node(System), it has hardrive and ram 
+
+Zookeeper - It is controller used to maintain topic during the transaction if it failed zookeeper offset it and continue where it failed      
+
+
+
+
+
+
+steps
+   
+   1. create springBoot application 
+       dependency Required:
+                    1. spring kafka
+                    2. spring web - to create Rest Controller
+                    
+                    

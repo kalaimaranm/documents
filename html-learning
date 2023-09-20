@@ -1,0 +1,149 @@
+
+
+
+
+
+
+
+
+common attribute are  -   id,class,name,style
+html                  -  only = symbol
+css                   - :,=,and - for space
+
+
+a    - href,target,download,ping(double request)
+img  - src,alt(only show text),height,width, usemap(#multiple href by seperating single image),title(can be use with all tags)
+global attributes   -  accesskey(shortcut for you page you can show the content with respective shortcut key)
+                    -  dir = "rtl,ltr,auto"
+                    - draggable = "true" default "false"
+
+                    -  	
+
+
+doubts:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                       HTML & CSS
+                                                       
+ Tags  - wrap the content with tags, and telling the browser this is some special element                 
+                                       
+If attribute have multiple value it is seperated with space
+
+
+By using display property in css we can change inline to block, block to inline
+ Inline Element:
+      It is vertical occupy only the content
+      We can't specify Height,Width,Bottom,Top  in Inline-Element
+      eg:  inside
+         anchore,  use with email,phone
+         small,
+         strong,
+         em,
+         i,
+         input,
+         label
+         
+ Block-line Element:	
+        It occupy the whole page(Horizontal)
+        We specify Height,Width,Bottom,Top  in Inline-Element  
+        
+        eg:
+           p,
+           h...,
+           form,
+           table,
+           list,
+           div
+           
+ Container
+        To group elements together
+        
+Text related Elements:
+
+         Maintain the most important(h1) to least important(h6)     - don't skip the hirarchy
+        h1 - for entire article (title)      main questions or title
+        h2 - it is part of h1 so, sub question of main question or title
+        h3 - it is part of h2 so, answer or sub division heading
+        p  - use definition of title with paragraph tag and seperate the each point with paragraph tag
+        strong - use strong for important word
+        em - emphasis for italic a word       
+        small - use this tags which is not belongs to paragraph
+        q - quotation it is an inline tag it add ""
+        blockquote - it seperate the content from paragraph quotation it is an blockline tag   - preffered           
+     
+ Seperator:
+ 
+        Used to seperate the content 
+        1. Linebreak - br used to divide inline tags
+        2. Thematic break or horizontal break   - hr used to divide paragraph
+                  
+List :
+   list are used to show the data in order
+   1.ol     use along with a tag  for li
+   2.ul     use along with a tag  for li
+   try nested list
+              
+ Images:
+     img  src = path of file alt = alternate message 
+     use svg format - vector format instead of jpeg - raster format
+     Because svg maintain the sharpness of image
+     PNG is sligtly better than JPEG
+     
+     
+     width, height  -  px,rem,%
+     
+     if you give width automatically heigth adjusted
+     if you give heigth automatically width adjusted
+     
+ Form:
+    
+     It is used get input from the user
+     
+     
+     Attributes:
+         action -  It is path of the form who is going to receive or handle the form
+         *input- autofocus  - when you refresh the page cursore automatically go to that input box, use for first input box in form          
+         disabled
+         placeholder - helper text.
+         select - option select
+         lable textarea
+         
+ Table:
+     
+     In early day tables are used to create layouts. But now we use flex-box and css grid.        
+ VS CODE SHORT-CUTS
+ 
+ Schematic Element:
+ 
+     Explaining about itself by name of tag.
+     More readable.
+     Easy for browser
+     
+     header - nav
+     footer - meta, about company
+     nav    - 
+     main   - only one tag in page
+     aside  - content related to the main tag , side nav
+     section , article - grouping the content
+     
+     1. ctrl + d
+     2. label+input  = enter                                            
+1. <a> tag - what is media attribute?
+ 

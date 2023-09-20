@@ -1,0 +1,73 @@
+payment gateway is
+
+
+amazon have there own payment gateway
+
+
+dont store card info in ecom let it to razor pay
+
+what is ledger?
+
+
+
+i) What is use of webhook?
+ii) when is second entry in double ledger created?
+
+
+
+
+
+
+
+
+Acquiring Bank : It is like receiver (Think like a card machine it is issued by any bank)
+
+
+
+                                                   LLD - Low Level Design
+                                                   
+                                                   
+                                                   Note name - Notability
+                                                   
+                                                   
+    Question:
+    How UPI works?
+    what is Pagination?
+    What is saga patterm?
+    When should go for mapping table?
+    
+                                                   
+        what is LLD?                                           
+      1. Implementation of HLD like how to write code 
+      2. How to implement in software 
+      3. How to design schema         
+      
+      
+      
+      use a noun to design a class
+      
+      
+      dont draw class diagram for all the classes. 
+      Draw only for Entity or noun
+      
+      
+      Gather Requirement
+      
+      
+      Multipayment - split bill  -> using paybalace+pay later+ bank acount
+      Clarify Reuirement
+      Dont Assume your self
+      
+      
+      
+      
+      business logic - loan app -> checking the score
+      retry payment with same transaction id(which is already failed) but with another card or UPI or B.A
+      
+      
+      
+      stater design pattern - eg: google map going to destination with different way
+      
+      Time series data - go for cassandra
+      kafka - messaging queues
+                                         

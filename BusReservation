@@ -1,0 +1,7 @@
+create table busReservation(id int,name varchar(50),seat int,departure varchar(50) default "Bangalore",drop_place varchar(50) default "Chennai", pickup_time timestamp default 2022-09-06 22:30:00,drop_time timestamp default 2022-09-07 06:30:00);
+
+ alter table busReservation change id id int auto_increment;  -- to add auto increment after creating table(change)
+ alter table busReservation auto_increment=10501;   -- to assign auto increment value after creating a table 
+
+
+autoincremet waiting -- finished (change columnname columname) ,    finished till get input from user name and seat 

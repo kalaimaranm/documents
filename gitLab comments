@@ -1,0 +1,16 @@
+1. copy path of the folder where you want to track the folder - cd /home/bas200193/gitPractise/gitPractise2
+2. To create the local repository(local server - storage) - git init
+3. To check status of which are the folders are in tracking and untracking - git status
+4. To add the file to tracking - git add filename
+5. To add the all the file in repository - git add .
+6. To remove the added file from the repository - git rm --cached filename
+7. To confirm that I am adding this file to repository - git commit -m "any comments"   (Now if you see status means it show only untracking file)
+8. Create a new Proect in your git Account & copy repository link provided given inside project  - git remote add origin https:gitlab.com/           kalaimaran/practising-gitlab.git
+9. push the repository which should be already commit(packed) - git push -u origin master
+   Then git ask username and password for verification 
+10. pull code from the git repository  - git pull -u origin master   
+
+
+NOTE - Only one time repsitory and path given to one projects
+NOTE - Add a file to repositroy before push to git 
+

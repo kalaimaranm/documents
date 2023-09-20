@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Sum{
+public static void main(String args[]){
+Scanner scan = new Scanner(System.in);
+int input = scan.nextInt();
+int sum=0;
+int last=0;
+String conv = Integer.toString(input);
+int first = conv.charAt(0);
+int last = conv.charAt(conv.length);
+sum = first+last;
+//while(input!=0){
+//last = input%10;
+
+//input = input/10;
+//first = input/10;
+//sum =last+first;
+//}
+System.out.println(sum);
+}
+}
+

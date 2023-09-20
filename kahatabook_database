@@ -1,0 +1,52 @@
+create table customer(user_id int auto_increment=10233 primary key,name varchar(25),phone bigint unique not null,debt_balance float,wallet_balance float);
+create table address(address_id int auto_increment=20233 primary key, user_id int foriegn key references customer(user_id),doorno varchar(7),street varchar(50),district varchar(18),country varchar(5) default india,pincode varchar(6));
+create table product(id int auto_increment,name varchar(20),);
+alter table product modify column id int auto_increment=30233;
+CREATE TABLE stock (id int NOT NULL AUTO_INCREMENT,product_id int DEFAULT NULL,quantity int DEFAULT NULL,date_time varchar(32) DEFAULT NULL,PRIMARY KEY (id),KEY product_id (product_id));
+alter table korder auto_increment = 40233;
+create table payment(id int auto_increment primary key, order_id int,customer_id int, foreign key(order_id) references order(id),foreign key(customer_id) references );
+
+create table korder(id int auto_increment primary key,customer_id int,total double,balance double,date_time varchar(32),foreign key references customer(id));
+alter table korder auto_increment = 50233;
+create table lineitem(id int auto_increment primary key,order_id int,product_id int,product_name varchar(20),price double,quantity int);
+
+create table payment (id int auto_increment primary key,order_id int,customer_id int,amount double,date_time varchar(32),description varchar(10));
+alter table payment add constraint foreign key (customer_id) references customer(id);
+alter table payment add constraint foreign key (order_id) references korder(id);
+alter table payment auto_increment = 60233;
+description = debt,order,wallet
+error:
+ pending
+    create table product(id int auto_increment,name varchar(28),price double,weight varchar(10),quantity int,);
+
+
+
+
+add(update) on:
+   use status for product because it is primary we can,t delete the product which is refered by foreign key in another table  ***
+   table alignment 
+   not validate using regax in product data
+   use one absolute method and use one dont use rs.beforeFirst();
+   use seperate method to search customer and return the resultset customer detail
+   backup data in local machine
+   have two differenct database data
+   aadhaar number in customer table
+   In product use seperate tabel for how much quantity,profit for each item,date of stock
+   use one wallet recharge and invoke in account creation, payment,check during customer delete account
+   product should not be duplicate
+ NOTE:
+ getObject(using Singleton) - before giving set default value for all fields because you may have last value in same object , make discription in every class where you make a payment method call as final static private String 
+public - 
+private - within the class
+protected - should be superclass(extend)
+default - access only within package
+
+worked:
+   create table customer(user_id int auto_increment=10233 primary key,name varchar(25),phone bigint unique not null,debt_balance float,wallet_balance float);
+   alter table customer add column enum("present","left");
+   
+   create table address(id int auto_increment primary key, user_id int,doorno varchar(7),street varchar(50),district varchar(18),country varchar(5) default "India",pincode varchar(6));
+   alter table address add constraint foreign key (user_id) references customer(user_id);
+   
+wallet update:
+   during payment if customer is paying  more than the bill ask shall I take to pay for debt after I have balance ask shall I take to wallet

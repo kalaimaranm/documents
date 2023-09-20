@@ -1,0 +1,22 @@
+IAM - Identity and Access Management (Authentication and Authorization)
+
+ - They are the restricted users
+ - They can be able to access only specific permissions
+ 
+ 
+ Policy -   1.Inline policy - It is one to one policy
+            2.Identity Based policy - It is such as IAM group,	user or role
+            
+enable and disable the region because id you enable all the region hacker can attack your application from dTagifferent city(Region)
+
+Fine Grained Access Control - if the IP range is far(specified range) from my organization give access to users or don't give
+
+MFA - Multi Factor Access -(Second layer of security not like username and pasword) - like google Authenticator scan the QR Code and enter the 6 digit code              
+
+
+
+                                                          GOVERNANCE
+                                                           
+  It is used to create multiple account in the Master account, it use to seggregate the application 
+  
+ Tag - is used in billing, auditing, who created this EC2 launch like etc....                                                            

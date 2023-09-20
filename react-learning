@@ -1,0 +1,157 @@
+                                                                        REACT
+                                                                        
+                                                      babel
+                                                      jsx
+                                                      tsx
+                                                      web-pack
+                                                      SPA - Single Page Application***
+                                                      virtual DOM
+                                                      frame-work vs library
+                                                      react hooks function way of creating
+                                                      react life cycle method
+                                                      
+                                                      
+                                                      
+                                                      app.js - starting point react 
+                                                      state?
+                                                      file structure
+                                                      naming strandard of class, jsx?
+                                                      web-pack?
+                                                    
+                                                    
+                                                    
+                                                    class 
+                                                    state
+                                                    props
+                                                    life-cycle method
+                                                    
+                                                    props and state are integrated
+                                                    
+                                                    
+                                                    Each class is a component
+                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                            React
+
+
+
+                     
+                             npm install @mui/material @emotion/react @emotion/styled
+                             text field 
+                             button
+                             icon
+                             
+                             
+                         
+
+
+
+
+                                                          HTML --> DOM
+                                                          
+                           Only one index.html file
+                           
+                           source(src) -
+                                 react code
+                                 
+                                                                
+                                 
+                DOM:
+                   true structure
+                   
+       babel : javascript compiler
+               is used to convert old version of javascript to new version
+               
+       jsx   : javascript syntax
+               but it looks like html but not html
+               
+           javascript long code to react short code
+           imperative to declarative style
+           How ever backend react uses javascript behind the scene
+           
+           
+           software for react: 
+                           1. nodejs
+                           2. npm javascript package manager(library) it already comes with node
+                           3. react development tool extension in browser
+                                                                                   
+                                 
+            why App.js?
+            
+                  It is a root component of all component
+                  
+            what is JSX?
+                  It is look like html but not a html
+                  if You want write js code inside the jsx(html) use {}
+                  we can't use direct object inside {}            eg: {{name:"name",age:12}} not allowed
+                  we can't use logical true value inside {}       eg: {1 === 1} not allowed
+                  
+                                          Functional Component
+                                          
+                  component name file name should start with Capital
+                  Always use seperate seperate component it reduce the code redentency
+                  Reuse the code again and again
+                  Not neccesary to use <div></div> inside the function 
+                  
+                                          CSS-style(style = {jsObjectname})
+                                          
+                 Inline & Internal:
+                 Inline css in functional component is like object in js
+                 we have to create js object and store key value(backgroundColor:blue)
+                 or else directly declare eg: style = {{backgroundColor:blue,...}}                                        
+                 
+                 External :
+                 External css is writing in another file and import it and use the class name in className = "classname"                 
+                 
+                                       
+                                                  Event(sambavam)(reverse process in javascript(documnet.getElementById('idname')))
+                                                  
+                1. onClick it execute the method when you click on respective button
+                         syntax onClick = {(e)=>functionName()} - work
+                                onClick = {(e)=>functionName}   - work
+                                onClick = {functionName()}     - not work, this will execute during the compile time
+                                                                             
+                                 
+                                 
+                                 
+                                               User-state(Auto-reloading)
+                                      while importing hooks must be inside the curly brase         
+                                               
+                                               
+                Hooks:
+                                                 
+                                               
+                                               
+                                               
+                                               
+               npx create-react-app appname
+               npm start
+               ctrl+c	                  
+                                 
+                                 
+                                 
+                                 
+                                 
+                                                          
+for API calls 
+     1. fetch - provided by JS
+     2. axios - external library
+                     
+                     conditional rendering
+                     mock api
+                     cross origin request handling
+                     
+                     
+                     
+                     
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+useState();
+use effect();
+                     
+                     
+                     
+                     
+                     
+                     
+                                                                        

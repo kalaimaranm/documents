@@ -1,0 +1,33 @@
+                                                                  Docker
+                                                                  
+                                                                  
+                                                                  
+         All developer work in same environment 
+         eg: Dependecy
+             Replica of schema      
+             
+             
+             
+             Allows us to create container
+             
+             
+             
+        why Docker?
+           clone the code from git in local machine then need to download the dependency to run the application in local machine.               
+           moving parts (dependency) - like frontend dependency,backend dependency,schema	
+           
+           
+           docker size is small compared to VM
+           so, we can have large number of docker 	
+           Kernal? - os is tracked by kernal        OS -> Kernel -> Hardware(Machine)
+           
+           
+                                                         VM - Virtual Machine
+                                                         
+                  Infrastructure - Real Machine 
+                  Hyperviser     - communicate between OS(Host Machine) and VM 
+                  Each VM are isolated with each other
+                  
+                  
+                  
+                                                                                                

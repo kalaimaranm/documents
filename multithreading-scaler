@@ -1,0 +1,15 @@
+                                    Multithreading
+                                    
+                                    
+        1. google chorme is multithreading
+        
+        
+        CORE
+           core is multiple brain
+           CPU is consist of multiple core
+                                       Every process have atleast one thread
+                                       
+                                       
+                                       Thread th = new Thread();
+                                       teeling the OS I need one thread
+                                       implementing Runnable interface indicating it is a task

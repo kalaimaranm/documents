@@ -1,0 +1,5 @@
+                                                                      Normalization
+                                                                      
+      1. Organizing the data into multiple relatable table to reduce the redentency of data.
+      2. Repitation of data increase the size of database
+      3. Insertion,Deletion,Updation - Anomalies                                                                

@@ -1,0 +1,5 @@
+If Your are writing equalling mean 
+   1. you should try to false - one by one checking like return false.........
+   2. Atlast return true
+   3. return true should be last of the method(last line of the code).
+   

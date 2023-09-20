@@ -1,0 +1,46 @@
+update to fix : one by one checking conditions
+boolean b1 = ps.execute();
+//            if (b1) {  //return true or false
+//                ps2.setString(1, phone);
+//                boolean b2 = ps2.execute();
+//                if (b2) {  // if customer details stored and deleted 
+//                   ps.execute();
+//            ps2.setString(1, phone); start unwanted
+//            //  idQuery = idQuery + phone;
+//            ResultSet rs = ps2.executeQuery();
+//            rs.next();
+//            int id = rs.getInt(1);
+//            System.out.println(id);
+//            ps3.setInt(1, id);
+//            ps3.setString(2, houseNo);
+//            ps3.setString(3, street);
+//            ps3.setString(4, distric);
+//            ps3.setString(5, state);
+//            ps3.setString(6, pincode);
+//            if (ps3.execute()) {
+//                System.out.println("account created successfully");
+//            }    end 
+        //ps2.setString(1, phone);
+//                    ResultSet rs = ps2.executeQuery();  // return data
+//                    rs.next();
+//                    int id = rs.getInt(1);
+//                    System.out.println("inner");
+//                    ps3.setInt(1, id);
+//                    ps3.setString(2, houseNo);
+//                    ps3.setString(3, street);
+//                    ps3.setString(4, distric);
+//                    ps3.setString(5, state);
+//                    ps3.setString(6, pincode);
+//                    boolean b3 = ps3.execute();
+//                    if (b3) {
+//                        System.out.println("Account created successfully....");
+//                    }
+//
+//                } else {
+//                    System.err.println("Customer data not found");
+//                }
+//
+//            } else {
+//                System.err.println("Your account not created");
+//            }
+//            //CallableStatement = connection.prepareCall();

@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+cache temporary storage - between the database and server
+MVP -minimum viable Product
+
+one payment can have multiple transaction :
+            1. A -> B via UPI 1st attemp status:failed
+   same payment retry via Wallet  2nd attemp status:success
+   
+Multipart payment 
+
+
+
+
+
+
+                           Interface(when to use Interface)
+                           
+                           
+     want to do some work and it has multiple mode(way,method...) to achieve go for interface
+     statergy design pattern - above example
+     factory design pattern - doing again and again stuff                      
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     use composite key

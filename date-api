@@ -1,0 +1,8 @@
+before java 8 in java 7 if you use Data in java it will automatically create DATE_TIME in db 
+To over come this we can mention in temporal as Date.class
+But, recommended to use LocalDateTime new api after java 8
+
+
+Date      -> DATETIME(Temporal(Date.class))
+LocalDate -> DATE
+

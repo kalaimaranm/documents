@@ -1,0 +1,129 @@
+                                                             Project Inventory Management System
+                                                             
+              
+   Doubts:
+   
+      Adding product based on order id or product or two way because for one order id under products 
+      Is rental product have order id
+      difference between model id and system name?
+      for failed deletion want to return data because request only the id from client 
+      
+      
+     {
+    "productId": "",
+    "productName": "lenovo-laptop",
+    "productDesc": "It is a laptop",
+    "productPrice": 70000,
+    "serialNo": "LO93BVP",
+    "ownership": "RENTAL",
+    "warranty": {
+        "startDate": "18-09-2023",
+        "endDate": "18-09-2025"
+    },
+    "createdAt": "18-09-2023",
+    "updatedAt": "18-09-2023",
+    "status": "AVAILABLE",
+    "createdBy": "Admin-name",
+    "updatedBy": "Admin-name",
+    "tenantId": "9292",
+    "brandId": "9373",
+    "modelId": "9471",
+    "orderId": "9739"
+}
+      
+                 
+                                                             
+                              
+     - extra rent -  costs rise
+     - extra staffing     
+     -                    
+     
+     problem: 
+      
+                           difficult to track
+       Tracking products : what is product? on Boarding
+                           How many quantity?
+                           who currently using this product?
+			   office owned or rental product?
+                           who using this product currently?
+                           who are all used this product before?
+                           which are the problem are not used?
+      Notification :
+                           what are the products are going to over?
+                           
+                                                
+                           
+                                      
+                                      
+    features:
+       
+        - Monitor incoming and outgoing inventory meticulously
+        - scrap products
+        - if the product is taken in rental track and send notification to user and company
+        - scanning feature using mobile camera
+        - notification to respective person product comes under
+        - A good Inventory management system can make sure that you know where everything is at all times
+        - Tracking Cloud bills and subscription
+        - product condition before and after received/allot from/to person
+        - auto renewal if it is digital product / auto payment for digital products
+         
+        
+        
+        
+        
+        System Design IMS Employee request the product-> check product status/quantity/stock in Inventory-> allot to employee -> if the product for small period-> change product status ->send notification-> receive product back and check condition -> change product status
+                                                           -> buy the product and on board it and allot to respective employee
+          onboarding :
+                 stick barcode/id to product
+                 register it in inventory
+                 status of product  - free/onhold/repair/damage etc....
+                 notication based on product stock(if user(ADMIN) want to notify if the product stock minimum level)enable/disable
+                 
+                 
+                 
+                 who hold the product currently
+                 time-limit for the product
+                 product status before/after receving product
+          
+          
+          
+        
+         Doubts:
+      What are the digital products in BAssure?
+      Which products are comes under who?HR, ADMIN, .........
+      Who will be responsible for products in different domain company? IT, INDUSTRIAL,  PRODUCTION, AUTOMATED-COMPANY
+                                      NFC, Rfid
+      How possible tracking day to day cafeteria(pantry) product?                                
+                                          
+                                          
+                                          
+                         RFID:
+                           track multiple product at a same time
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               mostly used Design pattern
+                 resource : refactoringguru(site)
+                     book : marken LLD 
+                     1. facade, adapter, builder, factory
+                     2. singleton
+                     3. publisher/subscriber
+                     4. decorative design
+                     
+                     
+                     heledan() neema microservice framework
+           micronort
+           micro      
+           
+           
+           Memory errors in java:
+           stack overflow error
+           out of memory error
+                        
+                                                  

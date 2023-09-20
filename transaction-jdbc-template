@@ -1,0 +1,20 @@
+                                                                 Proxy (filter in servlet) (Broker)
+                                                                 
+             - It is extra layer added
+             - pre-checking the request
+             
+             
+             
+                          Client ----------->        Proxy  ----------->      Real Object      
+                          
+            - Proxy is used to pre checking the request 
+            - checking log, data(Validation) 
+            - This is achieve by Inheritance by extends the class create object for child child class check the data and call the parent class(which is server Original class)
+            
+            
+                                                         InvocationHandler
+                                                         
+                Proxy - java.lang.reflect
+                                                                                                                      
+                          
+                          

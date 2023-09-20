@@ -1,0 +1,216 @@
+1.Take 10 integer inputs from user and store them in an array. 
+Now, copy all the elements in an another array but in reverse order.
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+Scanner scan = new Scanner(System.in);
+System.out.println("Enter the size of Array");
+int size = scan.nextInt();
+int[] arr = new int[size];
+for(int i=0;i<arr.length;i++){   // user input
+    arr[i] = scan.nextInt();
+}
+int[] arrRev = new int[size];
+int in =0;
+for(int j=arr.length-1;j>=0;j--){  // Reverse a Array
+    arrRev[j] = arr[in];
+    ++in;
+}
+System.out.println("Reversed arrays is "+Arrays.toString(arrRev));
+	}
+}
+
+*****************************************************************************************************************************************************
+2.Find largest and smallest elements of an array.
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter the size of array ");
+    int size = scan.nextInt();
+    int[] arr = new int[size];
+    System.out.println("Enter five values for arr");
+    for(int i=0;i<arr.length;i++){
+        arr[i] = scan.nextInt();            /*  arr.sort();
+                                                 max = arr[arr.length-1]
+                                                  min = arr[0]        */
+    }
+    
+    int max=arr[0];            
+    for(int ii=1;ii<arr.length;ii++){
+       if(max<arr[ii]){
+           max=arr[ii];
+       }
+    }
+    System.out.println("Maximum of a given arrays without using sort method is "+ max);
+    int min =arr[0];
+     for(int jj=1;jj<arr.length;jj++){
+       if(min>arr[jj]){
+           min=arr[jj];
+       }
+
+	}
+	    System.out.println("Minimum of a given arrays without using sort method is "+ min);
+
+
+}
+}
+
+*****************************************************************************************************************************************************
+4.Take an array of 10 elements. Split it into middle and 
+store the elements in two dfferent arrays. E.g.-
+INITIAL array :
+58	24	13	15	63	9	8	81	1	78
+
+After spliting :
+58	24	13	15	63
+9	8	81	1	78
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter the size of array ");
+    int size = scan.nextInt();
+    int[] arr = new int[size];
+    System.out.println("Enter the values of arr ");
+    for(int i=0;i<size;i++){
+        arr[i] = scan.nextInt();
+    }
+    if(size%2==0){        // if the size of the array is even 
+        int lenEven = size/2;
+        int[] arr1 = new int[lenEven];
+        int[] arr2 = new int[lenEven];
+        int next =0;
+        for(int i=0;i<lenEven;i++){
+            arr1[i] = arr[next];
+            ++next;
+        }
+        int inc = 0;
+        for(int j=next;j<arr.length;j++){
+            arr2[inc] = arr[j];
+            ++inc;
+        }
+        System.out.println("Element in arr1 is "+ Arrays.toString(arr1));
+        System.out.println("Element in arr2 is "+ Arrays.toString(arr2));
+ 
+    }
+    else if(size%2!=0){       // if the size of the array is odd
+        int lenOdd = size/2;
+        int[] ar1 = new int[lenOdd];
+        int[] ar2 = new int[lenOdd+1];
+        int nextt=0;
+        for(int i=0;i<lenOdd;i++){
+            ar1[i] = arr[nextt];
+            ++nextt;
+        }
+        int inc = 0;
+        for(int j=nextt;j<arr.length;j++){
+            ar2[inc] = arr[j];
+            ++inc;
+        }
+        System.out.println("Element in arr1 is "+ Arrays.toString(ar1));
+        System.out.println("Element in arr2 is "+ Arrays.toString(ar2));
+ 
+    }
+        
+    
+	}
+}
+
+*****************************************************************************************************************************************************
+
+3.Write a program to check if elements of an array are same or not 
+whent you  read it  from front or back.
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter the size of array");
+    int size = scan.nextInt();
+    int[] arr = new int[size];
+    System.out.println("Enter the values of array ");
+    for(int i=0;i<size;i++){
+        arr[i] = scan.nextInt();
+    }
+    int[] arrRev = new int[size];
+    int inn=0;
+        for(int j=arrRev.length-1;j>=0;j--){
+            arrRev[j] = arr[inn];
+            ++inn;
+        }
+        boolean flag = false;
+        for(int k=0;k<arr.length;k++){
+            if(arr[k]==arrRev[k]){
+                flag=false;
+            }
+            else {
+                flag=true;
+                break;
+            }
+        }
+        if(flag==false){
+            System.out.println("Given arrays are palindrom");
+        }
+        else{
+            System.out.println("Given arrays are not palindrom");
+        }
+    
+	}
+}
+
+*****************************************************************************************************************************************************
+
+5.Consider an integer array, the number of elements in which is 
+determined by the user. The elements are also taken as input from the 
+user. Write a program to find those pair of elements that has the 
+maximum and minimum difference among all element pairs.
+
+
+import java.util.Arrays;
+
+public class Minimumandmaximum {
+    public static void main(String[] args) {
+        
+        int[] y={4,2,77,77};
+        Arrays.sort(y);
+        int max=y[y.length-1]-y[0];
+        int t,t1=max,kk=0,rr=0;
+        
+        for(int i=0;i<y.length;i++){
+            for(int j=i+1;j<y.length;j++){
+            t=y[j]-y[i];
+            
+            if(t<t1){
+                t1=t;
+                kk=i;
+                rr=j;
+            }
+            
+            }
+            
+        }
+        
+        System.out.println("maximum difference ="+max);
+        System.out.println("minimum difference="+t1+" "+" index="+kk+" "+"index="+rr);
+        
+    }
+    
+}
+
+
+
+
+
+

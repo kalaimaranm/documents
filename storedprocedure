@@ -1,0 +1,3 @@
+create definer=`Kalai`@`%`procedure getdata(in newdes varchar(50)) BEGIN select * from Employee; end#
+concurrency
+retrive

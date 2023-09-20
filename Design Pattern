@@ -1,0 +1,39 @@
+                                                             Single Responsible Principle(SRP)
+                                                             
+                                                             
+Every software component should have a SINGLE RESPONSIBILITY.	
+
+component - class,method,project,package,module
+expose a field - getter,setter
+
+How to define responsibility?
+      Every software component should have a single reason to change                     
+      before customer class I touch that class for all reason like update, delete, add...
+      
+      
+      
+                                                            Cohesion(relationship)(ஒற்றுமை)
+                                                            
+  seperating a component from bunch(low in cohesion) to container(high in cohesion)(1-1)                                                          
+
+example : 
+          1. Father is going to purchase grocery in super market.
+          2. After he reaches home.
+          3. Mom seperate the product from a bag(low in cohesion) to respective container (vegetables in veg container inside refridgerator, spices in              அஞ்சறை  பெட்டி, snacks inside the snacks box)(high in cohesion).                                                        
+                                                            
+      
+      
+                                                            Coupling()
+                                                         
+      
+      
+      
+      
+      
+      var-args- sender argument (int i1,int i2,int i3) -> is internally converted into single dimentional array and send to var-arg method
+      
+      
+      
+      
+      
+      com.bassure.khatabook.customers                                        
